@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-navy: #0a192f;
+  --color-brand-dark: #020c1b;
+  --color-brand-cyan: #64ffda;
+  --color-brand-light: #e6f1ff;
+  --color-brand-gray: #8892b0;
+  
+  --font-sans: "Inter", "Roboto", "sans-serif";
+}
+
+@layer base {
+  body {
+    @apply bg-brand-navy text-brand-light font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .glow-text {
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.5), 0 0 20px rgba(100, 255, 218, 0.3);
+  }
+  .glow-box {
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.2), inset 0 0 10px rgba(100, 255, 218, 0.1);
+  }
+}
+
+/* =========================================================
+   FOTO EQUIPO — Efecto Hacker Hover (Overflow Labs brand)
+   ========================================================= */
+.foto-equipo {
+  transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
+  border: 2px solid rgba(100, 255, 218, 0.25);
+}
+
+.foto-equipo:hover {
+  border-color: #64ffda;
+  box-shadow:
+    0 0 0 4px rgba(100, 255, 218, 0.08),
+    0 0 18px rgba(100, 255, 218, 0.45),
+    0 0 40px rgba(100, 255, 218, 0.15);
+  transform: translateY(-4px);
+}
+
+/* =========================================================
+   GLITCH / CRASH ANIMATIONS
+   ========================================================= */
+
+@keyframes glitch-skew {
+  0%   { transform: skew(0deg); }
+  10%  { transform: skew(-2deg); }
+  20%  { transform: skew(0deg); }
+  30%  { transform: skew(1.5deg); }
+  40%  { transform: skew(0deg); }
+  50%  { transform: skew(-1deg); }
+  60%  { transform: skew(0deg); }
+  100% { transform: skew(0deg); }
+}
+
+@keyframes glitch-clip-1 {
+  0%   { clip-path: inset(5% 0 90% 0); transform: translate(-4px, 0); }
+  25%  { clip-path: inset(30% 0 50% 0); transform: translate(4px, 0); }
+  50%  { clip-path: inset(60% 0 20% 0); transform: translate(-2px, 0); }
+  75%  { clip-path: inset(80% 0 5% 0);  transform: translate(3px, 0); }
+  100% { clip-path: inset(5% 0 90% 0);  transform: translate(-4px, 0); }
+}
+
+@keyframes glitch-clip-2 {
+  0%   { clip-path: inset(40% 0 40% 0); transform: translate(4px, 0);  }
+  33%  { clip-path: inset(10% 0 75% 0); transform: translate(-4px, 0); }
+  66%  { clip-path: inset(70% 0 10% 0); transform: translate(2px, 0);  }
+  100% { clip-path: inset(40% 0 40% 0); transform: translate(4px, 0);  }
+}
+
+@keyframes crash-flash {
+  0%   { opacity: 0; }
+  10%  { opacity: 0.9; }
+  20%  { opacity: 0.2; }
+  30%  { opacity: 0.85; }
+  50%  { opacity: 0.6; }
+  80%  { opacity: 0.7; }
+  100% { opacity: 0.75; }
+}
+
+@keyframes crash-text-blink {
+  0%, 100% { opacity: 1; }
+  45%       { opacity: 1; }
+  50%       { opacity: 0; }
+  55%       { opacity: 1; }
+}
+
+@keyframes mem-cell-overflow {
+  0%   { box-shadow: 0 0 0px rgba(255,107,107,0); }
+  50%  { box-shadow: 0 0 12px rgba(255,107,107,0.8); }
+  100% { box-shadow: 0 0 6px rgba(255,107,107,0.4); }
+}
+
+@keyframes mem-cell-safe {
+  0%   { box-shadow: 0 0 0px rgba(100,255,218,0); }
+  50%  { box-shadow: 0 0 10px rgba(100,255,218,0.6); }
+  100% { box-shadow: 0 0 4px rgba(100,255,218,0.2); }
+}
+
+@keyframes eip-hijack {
+  0%   { background-color: #1a0a0a; border-color: rgba(255,107,107,0.3); }
+  30%  { background-color: rgba(255,0,0,0.3); border-color: #ff0000; }
+  60%  { background-color: rgba(255,0,0,0.2); border-color: rgba(255,107,107,0.6); }
+  100% { background-color: rgba(200,0,0,0.25); border-color: #ff3333; }
+}
+
+.glitch-skew        { animation: glitch-skew 0.3s steps(1) forwards; }
+.glitch-layer-1     { animation: glitch-clip-1 0.15s steps(1) infinite; }
+.glitch-layer-2     { animation: glitch-clip-2 0.18s steps(1) infinite; }
+.crash-flash        { animation: crash-flash 0.4s ease-out forwards; }
+.crash-text-blink   { animation: crash-text-blink 1s step-start infinite; }
+.mem-cell-overflow  { animation: mem-cell-overflow 0.5s ease-out forwards; }
+.mem-cell-safe      { animation: mem-cell-safe 0.4s ease-out forwards; }
+.eip-hijack         { animation: eip-hijack 0.6s ease-out forwards; }
+
+
