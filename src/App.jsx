@@ -718,7 +718,7 @@ function App() {
 
               <div className="flex-shrink-0 w-full md:w-auto">
                 <a
-                  href="/presentacion.html"
+                  href="./presentacion.html"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full md:w-auto inline-flex items-center justify-center gap-3 px-8 py-5 font-bold font-outfit text-[#020c1b] bg-[#64ffda] hover:bg-[#64ffda]/90 rounded-lg shadow-[0_0_20px_rgba(100,255,218,0.3)] hover:shadow-[0_0_35px_rgba(100,255,218,0.5)] transition-all group duration-300 transform hover:scale-[1.03]"
@@ -896,7 +896,7 @@ function App() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-1 bg-gradient-to-r from-transparent via-[#64ffda] to-transparent opacity-30"></div>
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2 bg-white/5 p-2 rounded-lg">
-            <img src="/logo.png" alt="Overflow Labs Logo" className="w-auto h-8" />
+            <img src="./logo.png" alt="Overflow Labs Logo" className="w-auto h-8" />
             <span className="font-bold text-[#e6f1ff] tracking-widest ml-2">OVERFLOW LABS</span>
           </div>
           <p className="text-sm text-[#8892b0]">

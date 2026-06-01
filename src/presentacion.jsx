@@ -501,7 +501,7 @@ const PresentationApp = () => {
           </button>
 
           <a
-            href="/"
+            href="./"
             className="flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-mono text-white bg-[#112240] hover:bg-[#64ffda] hover:text-[#020c1b] transition-all border border-[#64ffda]/20 shadow-[0_0_15px_rgba(100,255,218,0.1)]"
           >
             <Home className="w-3.5 h-3.5" />
